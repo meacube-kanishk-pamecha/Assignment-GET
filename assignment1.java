@@ -1,15 +1,15 @@
 import java.util.*;
 public class assignment1{ 
-
+static int idn =1;
 static class Item 
 {
    int ItemId;
    String Name;
    String Description;
    Integer price;
-	Item(int i , String a , String d , int p)
+	Item( String a , String d , int p)
 	{ 
- 	  this.ItemId =i;
+ 	  this.ItemId =idn++;
    	  this.Name =a;
    	  this.Description = d;
   	  this.price =p;
@@ -23,9 +23,9 @@ static class Item
   		Scanner Sc = new Scanner (System.in);
 		HashMap<Integer,Item> market = new HashMap<>();
 
-          	 Item a = new Item(1,"apple","Kashmiri apple", 100);
-                 Item b = new Item(2,"banana","Kashmiri apple", 500);
-		 Item c = new Item(3,"apple","Kashmiri apple", 1040);
+          	 Item a = new Item("apple","Kashmiri apple", 100);
+                 Item b = new Item("banana","Kashmiri banana", 500);
+		 Item c = new Item("apple","box", 1040);
                  
                  market.put(1,a);
 		 market.put(2,b);
