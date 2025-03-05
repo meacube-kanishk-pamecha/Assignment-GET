@@ -27,9 +27,9 @@ static class Item
                  Item b = new Item("banana","Kashmiri banana", 500);
 		 Item c = new Item("apple","box", 1040);
                  
-                 market.put(1,a);
-		 market.put(2,b);
-		 market.put(3,c);
+                 market.put(a.ItemId,a);
+		 market.put(b.ItemId,b);
+		 market.put(c.ItemId,c);
 
  		 int j =0;
 		 int qty =0;
@@ -38,7 +38,7 @@ static class Item
     				int num = Sc.nextInt();
                                 Item curr = a;
  					if(num!=4) {
-   					System.out.println("press 1 : apple ,2 : banana , 3 : update quantity"  );
+   					System.out.println("press 1 : apple ,2 : banana , 3 : box"  );
 					int xID = Sc.nextInt();
                                         curr =  market.get(xID);
     					 if(num ==1 || num ==3) {
