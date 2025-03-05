@@ -38,19 +38,16 @@ static class Item
     				int num = Sc.nextInt();
                                 Item curr = a;
  					if(num!=4) {
-   System.out.println("press 1 : apple ,2 : banana , 3 : update quantity"  );
-
+   					System.out.println("press 1 : apple ,2 : banana , 3 : update quantity"  );
 					int xID = Sc.nextInt();
                                         curr =  market.get(xID);
-    					
-
-  					if(num ==1 || num ==3) {
-System.out.println("Number of Quantity");
-   					  qty = Sc.nextInt();
+    					 if(num ==1 || num ==3) {
+						System.out.println("Number of Quantity");
+   						qty = Sc.nextInt();
 						
-}
+						}
 		
-}
+					}
        				switch (num) {
                                   case 1 : addToCart(curr,qty); break;
 				  case 2 : System.out.println(displayQty(curr)); break;
