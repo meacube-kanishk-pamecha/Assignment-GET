@@ -4,9 +4,10 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-       // Current Cart  using oops 
+       
         int j = 0;
         int qty = 0;
+	// Current Cart  using oops 
         Cart m = new Cart();
         Scanner Sc = new Scanner(System.in);
         HashMap<Integer, Item> market = new HashMap<>();
@@ -59,11 +60,12 @@ public class Solution {
         Sc.close();
     }
    static class Item 
-{ private static int id =1;
+{ 
+    private static int id =1;
     private int ItemId;
     private String Name;
-   private String Description;
-   private Integer price;
+    private String Description;
+    private Integer price;
 	Item( String a , String d , int p)
 	{ 
  	  this.ItemId =id++;
