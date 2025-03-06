@@ -4,10 +4,9 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-       
+       // Current Cart  using oops 
         int j = 0;
         int qty = 0;
-	// Current Cart  using oops 
         Cart m = new Cart();
         Scanner Sc = new Scanner(System.in);
         HashMap<Integer, Item> market = new HashMap<>();
@@ -60,17 +59,17 @@ public class Solution {
         Sc.close();
     }
    static class Item 
-{ 
-    private static int id =1;
-    private int ItemId;
-    private String Name;
-    private String Description;
-    private Integer price;
+   {
+     private static  int id =1;
+    private int itemId;
+    private String name;
+   private String description;
+   private Integer price;
 	Item( String a , String d , int p)
 	{ 
- 	  this.ItemId =id++;
-   	  this.Name =a;
-   	  this.Description = d;
+ 	  this.itemId =id++;
+   	  this.name =a;
+   	  this.description = d;
   	  this.price =p;
  	}
 	Item(){}
@@ -79,21 +78,19 @@ public class Solution {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
-    public static int getId() {
-        return id;
-    }
+    
     public int getItemId() {
-        return ItemId;
+        return itemId;
     }
     public String getName() {
-        return Name;
+        return name;
     }
 }
 
  static class Cart {
-    static HashMap<Item,Integer> market ;
+ HashMap<Item,Integer> market ;
        Cart(){
         market = new HashMap<>();
        }
@@ -134,9 +131,6 @@ public class Solution {
                  a+=nn;
              }
              return a; 
-        } 
-    
-    
-    
+        }     
     }
 }
